@@ -167,5 +167,12 @@ type excludeevevnt = Exclude<eventtype, 'scroll'> //here we exclude scroll
 
 
 
+/////////////////////////////////////////////////////////
+//Type inference in zod
+import {z} from 'zod';
+const  a = z.string();
+
+type a = z.infer<typeof a>; 
+
 
 
