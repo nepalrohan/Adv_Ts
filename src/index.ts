@@ -106,8 +106,8 @@ type Users2 = Record<string, {
 
 //more specific
 type Userr ={
-    id:number;
-    username:string;
+    name:string;
+    age:number;
 }
 type Usr =Record<string, Userr>
 
@@ -124,6 +124,35 @@ const users = {
 }
 
 //in this way records are used:
+
+
+
+//5. Map
+
+const usser:Usr ={
+"asdfasdfs":{age:21, name:"safdasfddf"},
+"sedf":{age:32, name:"safdasfddf"}
+
+}
+
+//to access we use normally
+usser["sedf"].age;
+
+
+//using Map
+
+const uuser = new Map();
+
+uuser.set("asdfasdfs", {age:21, name:"safdasfddf"});
+uuser.set("sedf", {age:32, name:"safdasfddf"});
+
+const u = uuser.get('sedf');
+// we can use set, get, delete
+uuser.delete("sedf")
+
+
+
+
 
 
 
