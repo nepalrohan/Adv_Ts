@@ -71,3 +71,59 @@ const user2:Readonly<Person2> = {
     age:21
 }
 // user.name = "asdfhaslkjdfh" //it throws error as name is readonly
+
+//mostly useful while storing api keys so that by mistake no key values are changes
+
+/*
+eg:
+const config:Readonly<config>{
+api:"afdasdfasdfasdfasdfasfd"
+key:"asdfasdfasfdadf"
+}
+ */
+
+
+
+
+//4. Record
+
+
+type Users = {
+    [key:string]:{
+        id:number;
+        username:string;
+    }
+}
+
+
+//or
+//using record
+
+type Users2 = Record<string, {
+    id:number;
+    username:string;
+}>
+
+//more specific
+type Userr ={
+    id:number;
+    username:string;
+}
+type Usr =Record<string, Userr>
+
+ //creating an object and assigning values
+const users = {
+    "asdfaf":{
+        id:1,
+        username:"asdfasf"
+    },
+    "Asdfas":{
+        id:2,
+        username:"asdfasf"
+    }
+}
+
+//in this way records are used:
+
+
+
