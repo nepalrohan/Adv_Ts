@@ -140,8 +140,12 @@ usser["sedf"].age;
 
 
 //using Map
+type Us ={
+    age:number,
+    name:string
+}
 
-const uuser = new Map();
+const uuser = new Map<string, Us>(); //we can also specify the return users type by this technique
 
 uuser.set("asdfasdfs", {age:21, name:"safdasfddf"});
 uuser.set("sedf", {age:32, name:"safdasfddf"});
@@ -151,6 +155,15 @@ const u = uuser.get('sedf');
 uuser.delete("sedf")
 
 
+// 6. Exclude
+//we can exclude the itemsa that we dont need in new one type
+
+
+type eventtype = 'click' | "scroll" | "mousemove";
+
+type excludeevevnt = Exclude<eventtype, 'scroll'> //here we exclude scroll
+
+//now we have only click and mousemove
 
 
 
